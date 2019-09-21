@@ -1,0 +1,3 @@
+homem
+mulher
+nao-binario

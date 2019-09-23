@@ -16,7 +16,7 @@ class Perfil:
         self.pessoas = None
         self.animais = None
         self.altura = None
-        self.hobbies = None
+        self.hobbies = self.definindoHobbies()
         self.espaco = None
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -41,7 +41,7 @@ class Perfil:
 
     def definindoGenero(self, probabilidade):
         expressao_generos = self.leitura("expressao_genero.txt")
-        identidade_generos = self.leitura("identidade_genero")
+        identidade_generos = self.leitura("identidade_genero.txt")
         p1 = random.choice(probabilidade)
         p2 = random.choice(probabilidade)
         if p1 <= 43:
@@ -65,3 +65,12 @@ class Perfil:
 
     def definindoIdade(self, probabilidade):
         pass
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+    def definindoHobbies(self):
+        hobbies = self.leitura("hobbies.txt")
+        h1 = hobbies.pop(random.randint(0, 35))
+        h2 = hobbies.pop(random.randint(0, 34))
+        h3 = hobbies.pop(random.randint(0, 33))
+        return h1 + ', ' + h2 + ' e ' + h3

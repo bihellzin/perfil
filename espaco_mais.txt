@@ -1,0 +1,6 @@
+quarto
+sala de estar
+sala de jantar
+cozinha 
+escritório
+garagem
